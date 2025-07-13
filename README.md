@@ -1,9 +1,42 @@
-Mirat (ميراث) - Islamic Inheritance Calculation Library
+<div align="center">
+<img src="https://www.google.com/search?q=https://raw.githubusercontent.com/elguennouni-dev/mirat/main/docs/assets/logo.png" alt="Mirat Logo" width="150"/>
+<h1>Mirat (ميراث)</h1>
+<p><strong>An Accurate and Modern Islamic Inheritance Calculation Library for Java</strong></p>
+<p>
+<a href="https://www.google.com/search?q=https://github.com/elguennouni-dev/mirat/actions/workflows/maven.yml">
+<img src="https://www.google.com/search?q=https://github.com/elguennouni-dev/mirat/actions/workflows/maven.yml/badge.svg" alt="Java CI with Maven"/>
+</a>
+<a href="https://opensource.org/licenses/MIT">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
+</a>
+<a href="https://www.google.com/search?q=https://maven-badges.herokuapp.com/maven-central/elguennouni.dev.mirat/mirat">
+<img src="https://www.google.com/search?q=https://img.shields.io/maven-central/v/elguennouni.dev.mirat/mirat.svg%3Flabel%3DMaven%2520Central" alt="Maven Central"/>
+</a>
+</p>
+</div>
 
-Mirat is a modern, object-oriented Java library designed to accurately calculate the distribution of an estate according to the principles of Islamic inheritance law (علم الفرائض - The science of inheritance).
+Mirat is a modern, object-oriented Java library designed to accurately calculate the distribution of an estate according to the principles of Islamic inheritance law (Ilm al-Farā'iḍ or Ilm al-Mawārīth).
 
 The library provides a clean and intuitive API for developers to model an inheritance case, define the estate (Tarika) and heirs (Warith), and compute the precise fractional shares for each eligible individual. It is built to be robust, accurate, and easy to integrate into any Java application.
-Features
+📋 Table of Contents
+
+    ✨ Features
+
+    🕋 Core Concepts
+
+    🚀 Getting Started
+
+        Installation
+
+        Usage Example
+
+    📚 API Overview
+
+    🤝 Contributing
+
+    📜 License
+
+✨ Features
 
     Accurate & Rule-Based: Implements the core rules of Sunni inheritance for various types of heirs.
 
@@ -23,7 +56,7 @@ Features
 
     Text Export: Provides a simple method to export the final distribution results as a formatted, human-readable string.
 
-Core Concepts
+🕋 Core Concepts
 
 To use the library effectively, it's helpful to understand these key terms from Islamic law:
 
@@ -39,6 +72,7 @@ To use the library effectively, it's helpful to understand these key terms from 
 
     Awl (عول): The principle of "increase," applied when the sum of Fard shares exceeds 1. All shares are proportionally reduced.
 
+🚀 Getting Started
 Installation
 
 Mirat is built with Apache Maven. To include it in your project, add the following dependency to your pom.xml file.
@@ -46,11 +80,11 @@ Mirat is built with Apache Maven. To include it in your project, add the followi
 <dependency>
     <groupId>elguennouni.dev.mirat</groupId>
     <artifactId>mirat</artifactId>
-    <version>1.0.0</version> <!-- Replace with the desired version -->
+    <version>1.0.0</version> <!-- Replace with the latest version -->
 </dependency>
 
 Then, run mvn clean install to download the dependency.
-Getting Started
+Usage Example
 
 Here is a quick example of how to calculate an inheritance case.
 1. Define the Estate (Tarika)
@@ -136,7 +170,7 @@ Was 'Awl' applied? false
 Excluded Heirs:
 - Full Brother
 
-API Overview
+📚 API Overview
 
     Mirat: The main class and entry point. It orchestrates the calculation.
 
@@ -146,12 +180,4 @@ API Overview
 
     WarithRelation: An interface implemented by enums (Usol, Forou, Ikhwa, etc.) that define relationships.
 
-    DistributionResult: A data object containing the results: a list of Share objects, excluded heirs, and the net estate value.
-
-    Share: A data object representing a single heir's final share, including their fraction and monetary amount.
-
-    Fraction: A helper class for accurate fractional arithmetic.
-
-Contributing
-
-Contributions are welcome! Whether you want to fix a bug, add a new feature, or improve the documentation, please feel free to open an issue or submit
+    DistributionResult: A data object containing the results: a list of Share objects
