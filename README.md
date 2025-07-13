@@ -77,11 +77,13 @@ Installation
 
 Mirat is built with Apache Maven. To include it in your project, add the following dependency to your pom.xml file.
 
+```xml
 <dependency>
     <groupId>elguennouni.dev.mirat</groupId>
     <artifactId>mirat</artifactId>
     <version>1.0.0</version> <!-- Replace with the latest version -->
 </dependency>
+```
 
 Then, run mvn clean install to download the dependency.
 Usage Example
@@ -91,6 +93,7 @@ Here is a quick example of how to calculate an inheritance case.
 
 First, create a Tarika object with the deceased's financial details.
 
+```java
 import elguennouni.dev.mirat.model.Tarika;
 import java.math.BigDecimal;
 
@@ -101,11 +104,13 @@ Tarika tarika = new Tarika(
         new BigDecimal("5000"),   // Wasiya (Bequest)
         new BigDecimal("2000")    // Funeral Costs
 );
+```
 
 2. Define the Heirs (Warith)
 
 Next, create a list of all potential heirs with their relationship to the deceased.
 
+```java
 import elguennouni.dev.mirat.model.Warith;
 import elguennouni.dev.mirat.relationship.*;
 import java.util.List;
@@ -122,11 +127,13 @@ List<Warith> heirs = List.of(
     // A full brother, who will be excluded (Hajb) by the son and father.
     new Warith("Full Brother", Ikhwa.AKH_SHAQIQ, Gender.MALE, true, true, false)
 );
+```
 
 3. Calculate and Display the Result
 
 Finally, instantiate the Mirat class and call calculate() to get the distribution.
 
+```java
 import elguennouni.dev.mirat.Mirat;
 import elguennouni.dev.mirat.model.DistributionResult;
 
@@ -151,21 +158,30 @@ try {
     System.err.println("An error occurred during calculation: " + e.getMessage());
     e.printStackTrace();
 }
+```
 
 Expected Output
 
---- Inheritance Calculation Result ---
+### --- Inheritance Calculation Result ---
+
 صافي التركة: 103000.00
 
-تفاصيل الحصص:
-Father : 1/6 = 17166.67 (ASABA)
-Wife : 1/8 = 12875.00 (FIXED)
-Son : 14/48 = 30041.67 (ASABA)
-Daughter : 7/48 = 15020.83 (ASABA)
+**تفاصيل الحصص:**
 
---- Detailed Information ---
-Net Estate for Distribution: 103000.00
-Was 'Awl' applied? false
+| الوريث   | الحصة  | القيمة    | نوع الحصة  |
+|----------|---------|-----------|------------|
+| الأب      | 1/6     | 17166.67  | ASABA      |
+| الزوجة   | 1/8     | 12875.00  | FIXED      |
+| الابن    | 14/48   | 30041.67  | ASABA      |
+| البنت    | 7/48    | 15020.83  | ASABA      |
+
+### --- Detailed Information ---
+
+| المعلومات                  | القيمة    |
+|---------------------------|-----------|
+| Net Estate for Distribution | 103000.00 |
+| Was 'Awl' applied?          | false     |
+
 
 Excluded Heirs:
 - Full Brother
