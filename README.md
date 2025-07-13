@@ -1,6 +1,6 @@
 <div align="center">
 <img src="https://www.google.com/search?q=https://raw.githubusercontent.com/elguennouni-dev/mirat/main/docs/assets/logo.png" alt="Mirat Logo" width="150"/>
-<h1>Mirat (ميراث)</h1>
+<h1>MiratLib (ميراث)</h1>
 <p><strong>An Accurate and Modern Islamic Inheritance Calculation Library for Java</strong></p>
 <p>
 <a href="https://www.google.com/search?q=https://github.com/elguennouni-dev/mirat/actions/workflows/maven.yml">
@@ -15,7 +15,7 @@
 </p>
 </div>
 
-Mirat is a modern, object-oriented Java library designed to accurately calculate the distribution of an estate according to the principles of Islamic inheritance law (Ilm al-Farā'iḍ or Ilm al-Mawārīth).
+Mirat is a modern, object-oriented Java library designed to accurately calculate the distribution of an estate according to the principles of Islamic inheritance law (علم الفرائض - The science of inheritance).
 
 The library provides a clean and intuitive API for developers to model an inheritance case, define the estate (Tarika) and heirs (Warith), and compute the precise fractional shares for each eligible individual. It is built to be robust, accurate, and easy to integrate into any Java application.
 📋 Table of Contents
