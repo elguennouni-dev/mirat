@@ -4,15 +4,34 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.messanger.app</groupId>
-    <artifactId>Mirat</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>elguennouni.dev.mirat</groupId>
+    <artifactId>miratlib</artifactId>
+    <version>1.0.0</version>
+
+    <name>MiratLib</name>
+    <description>A Java library for Islamic inheritance calculation based on علم الفرائض</description>
+    <url>https://github.com/elguennouni-dev/mirat</url>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <licenses>
+        <license>
+            <name>The MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>elguennouni</id>
+            <name>Abdelilah El Guennouni</name>
+            <email>abdlilah.el.guennouni@gmail.com</email>
+        </developer>
+    </developers>
 
     <build>
         <plugins>
@@ -25,8 +44,21 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 
 </project>
